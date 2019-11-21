@@ -19,6 +19,16 @@ class BeerRepository extends ServiceEntityRepository
         parent::__construct($registry, Beer::class);
     }
 
+    public function getFirst()
+    {
+        return $this->createQueryBuilder('b')
+            ->orderBy('b.id', 'ASC')
+            ->setMaxResults(1)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
     // /**
     //  * @return Beer[] Returns an array of Beer objects
     //  */

@@ -37,10 +37,11 @@ class BeerController extends AbstractFOSRestController
     public function getBeersAction(PaginatorInterface $paginator, Request $request)
     {
         $repository = $this->getDoctrine()->getRepository(Beer::class);
+        $repositoryBrewer = $this->getDoctrine()->getRepository(Brewer::class);
 
         $view = $this->view(
             $paginator->paginate($repository->findBy(
-                ['brewer' => $request->query->get('brewer_id') ?? 1],
+                [],
                 ['name' => 'DESC']),
                 $request->query->get('page') ?? 1,10),
             Response::HTTP_OK
