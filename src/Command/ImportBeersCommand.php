@@ -141,6 +141,7 @@ class ImportBeersCommand extends Command
             ->setType($data['type'])
             ->setCountry($data['country'])
             ->setBrewer($brewer)
+            ->setImgUrl($data['image_url'])
             ->setPricePerLitre($this->countPricePerLitre($data['size'], $data['price']));
         return $beer;
     }

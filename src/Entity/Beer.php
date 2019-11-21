@@ -42,6 +42,11 @@ class Beer
      */
     private $price_per_litre;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $img_url;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -103,6 +108,18 @@ class Beer
     public function setPricePerLitre(float $price_per_litre): self
     {
         $this->price_per_litre = $price_per_litre;
+
+        return $this;
+    }
+
+    public function getImgUrl(): ?string
+    {
+        return $this->img_url;
+    }
+
+    public function setImgUrl(string $img_url): self
+    {
+        $this->img_url = $img_url;
 
         return $this;
     }

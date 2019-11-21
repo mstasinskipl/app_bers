@@ -2,20 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c773fec-d6c3-4e9f-9537-51353853f5bc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/app.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/components/Beers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/components/Home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/assets/vue/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/components/TheAboutPage.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/vue/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/plugins/vuetify.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/vue/plugins/vuetify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/vue/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/API/BeerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/API/BeerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/BeerRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/BeerRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/BrewerRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/BrewerRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Command/ImportBeersCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/ImportBeersCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Beer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Beer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/brewer/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/brewer/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +34,7 @@
       <list>
         <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -178,6 +179,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../symfony-vuetify-example" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -217,7 +219,7 @@
       <updated>1573808116445</updated>
       <workItem from="1573808117692" duration="2217000" />
       <workItem from="1573987117038" duration="649000" />
-      <workItem from="1573993741550" duration="58856000" />
+      <workItem from="1573993741550" duration="63447000" />
     </task>
     <servers />
   </component>

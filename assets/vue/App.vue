@@ -1,4 +1,5 @@
 <template>
+  <v-app>
   <div>
     <v-data-table
             :headers="headers"
@@ -7,8 +8,44 @@
             :server-items-length="totalBeers"
             :loading="loading"
             class="elevation-1"
-    ></v-data-table>
+    >
+      <template v-slot:item.details="{ item }">
+        <v-btn  icon color="green"
+               @click.prevent="openDialogBeer(item)">
+          <v-icon>edit</v-icon>
+        </v-btn>
+      </template>
+
+    </v-data-table>
+    <v-row justify="center">
+      <v-dialog
+              v-model="dialog"
+              max-width="290"
+      >
+        <v-card>
+          <v-card-title class="headline">{{ beer.name }}</v-card-title>
+
+          <v-card-text>
+            <v-img :src="beer.img" alt="Error"></v-img>
+          </v-card-text>
+
+          <v-card-actions>
+            <v-spacer></v-spacer>
+
+
+            <v-btn
+                    color="green darken-1"
+                    text
+                    @click="dialog = false"
+            >
+              OK
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+    </v-row>
   </div>
+  </v-app>
 </template>
 <script>
   import axios from 'axios'
@@ -16,10 +53,15 @@
     data () {
       return {
         totalBeers: 0,
+        dialog: false,
         beers: [],
         loading: true,
         pagination: {},
         options: {},
+        beer: {
+          name: null,
+          img: null,
+        },
         headers: [
           {
             text: 'Name',
@@ -30,6 +72,7 @@
           { text: 'Type', value: 'type' },
           { text: 'Country', value: 'country' },
           { text: 'Price per litre', value: 'price_per_litre' },
+          { text: 'Details', value: 'details'}
         ],
       }
     },
@@ -53,6 +96,13 @@
               })
     },
     methods: {
+      openDialogBeer(item)
+      {
+        console.log(item)
+        this.beer.name = item.name;
+        this.beer.img = item.img_url;
+        this.dialog = true;
+      },
       getDataFromApi () {
         this.loading = true
         return new Promise((resolve) => {
@@ -97,8 +147,6 @@
           per_page: rowsPerPage,
           sortBy: sortBy
         };
-
-        console.log(params)
 
         return new Promise( function(resolve) {
           axios.get('api/beers', {params}).then(response => {
